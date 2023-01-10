@@ -1245,7 +1245,7 @@ nav {
 
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 400px) {
     .title-header1 {
         font-size: calc(13px + (8/1200) * 100 * 1vw);
     }
@@ -1258,7 +1258,7 @@ nav {
     }
 
     .container-skills {
-        width: 320px;
+       width: 300px;
     }
 
     .container-skill-title {
