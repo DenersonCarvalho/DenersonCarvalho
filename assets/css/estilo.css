@@ -544,7 +544,7 @@ nav {
 
 .titulo-habilidade {
     grid-column-start: 1;
-    grid-column-end: 6;
+    grid-column-end: 5;
     grid-row-start: 2;
     grid-row-end: 3;
     display: flex;
@@ -1225,7 +1225,13 @@ nav {
     }
 
     .titulo-habilidade {
+        font-size: 1.5em;
+    }
+    .titulo-portifolio {
         font-size: 2em;
+    }
+    .titulo-contato {
+        font-size: 1.6em;
     }
 
     .container-skill {
@@ -1240,6 +1246,13 @@ nav {
 }
 
 @media only screen and (max-width: 375px) {
+    .title-header1 {
+        font-size: calc(13px + (8/1200) * 100 * 1vw);
+    }
+    .title-header2 {
+        width: 100%;
+        font-size: calc(20px + (8/1200) * 100 * 1vw);
+    }
     .logo-icon-div2 {
         display: none;
     }
