@@ -94,7 +94,8 @@ nav {
     clear: both;
     display: table;
 }
-.logo a{
+
+.logo a {
     display: flex;
     align-items: center;
 }
@@ -215,6 +216,7 @@ nav {
     justify-content: center;
     align-items: center;
 }
+
 .title-header1,
 .title-header2 {
     text-align: center;
@@ -241,37 +243,41 @@ nav {
     font-family: 'Oswald', helvetica, arial, sans-serif;
     white-space: nowrap;
 }
+
 .header-animado {
     width: 100%;
     height: 100%;
-    padding-top: 200px;
-    padding-left: 320px;
-
+    display: grid;
 }
+
 .container-header {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 3;
     color: var(--text);
 }
 
-.header-apresentacao, .typed-text{
+.header-apresentacao, .typed-text {
     font-size: 2.5rem;
     font-family: var(--font-family2);
     font-weight: 900;
 }
-.header-apresentacao{
+
+.header-apresentacao {
     font-size: 2.5rem;
 }
-.header-apresentacao span{
-    color: var(--bgcolor5);
-}
-.typed-text{
+
+.typed-text {
     color: var(--bgcolor5);
     font-size: 3.5em;
 }
-.efeito-typed{
-    display: flex;
-    align-items: center;
+
+.header-apresentacao span {
+    color: var(--bgcolor5);
 }
-.cursor{
+
+.cursor {
     display: inline-block;
     background-color: var(--bgcolor5);
     margin-left: 0.1rem;
@@ -279,20 +285,43 @@ nav {
     animation: blink 1s infinite;
     height: 80px;
 }
-.cursor.typing{
-    animation: none;
-}
-.header-descricao{
+
+.header-descricao {
     margin-top: 30px;
     width: 70%;
 }
-@keyframes blink {
-    0% {background-color: var(--bgcolor5);}
-    49% {background-color: var(--bgcolor5);}
-    50% {background-color: transparent;}
-    99% {background-color: transparent;}
-    100% {background-color: var(--bgcolor5);}
+.efeito-typed {
+    display: flex;
+    align-items: center;
 }
+
+.cursor.typing {
+    animation: none;
+}
+
+
+@keyframes blink {
+    0% {
+        background-color: var(--bgcolor5);
+    }
+
+    49% {
+        background-color: var(--bgcolor5);
+    }
+
+    50% {
+        background-color: transparent;
+    }
+
+    99% {
+        background-color: transparent;
+    }
+
+    100% {
+        background-color: var(--bgcolor5);
+    }
+}
+
 .container-contato-icons-header {
     width: 100%;
     display: flex;
@@ -1067,7 +1096,8 @@ nav {
 .logo-footer {
     margin-left: 0;
 }
-.logo-rodape{
+
+.logo-rodape {
     display: flex;
     align-items: center;
 }
@@ -1298,6 +1328,17 @@ nav {
         margin-top: 50px;
         flex-direction: column;
     }
+    
+    .header-apresentacao {
+        font-size: 2.5rem;
+    }
+    
+    .typed-text {
+        font-size: 3em;
+    }
+    .cursor {
+        height: 70px;
+    }
 }
 
 @media only screen and (max-width: 700px) {
@@ -1354,6 +1395,17 @@ nav {
     .titulo-experiencia {
         font-size: 2em;
     }
+        
+    .header-apresentacao {
+        font-size: 2rem;
+    }
+    
+    .typed-text {
+        font-size: 2.5em;
+    }
+    .cursor {
+        height: 60px;
+    }
 
 }
 
@@ -1366,24 +1418,28 @@ nav {
         font-weight: 900;
         font-size: 3rem;
     }
+
     .icon2 {
         left: -20px;
     }
+
     .title-header2 {
         width: 100%;
         font-size: calc(20px + (8/1200) * 100 * 1vw);
     }
 
     .logo-nome1,
-.logo-nome2 {
-    font-size: 1.1rem;
-}
-.logo-desc{
-    font-size: .8rem;
-}
-.logo-icon-div1 {
-    width: 55px;
-}
+    .logo-nome2 {
+        font-size: 1.1rem;
+    }
+
+    .logo-desc {
+        font-size: .8rem;
+    }
+
+    .logo-icon-div1 {
+        width: 55px;
+    }
 
     .container-skills {
         width: 300px;
@@ -1392,7 +1448,27 @@ nav {
     .container-skill-title {
         margin-left: 50px;
     }
-    .copyright{
+
+    .copyright {
         font-size: .6rem;
+    }
+            
+    .header-apresentacao {
+        font-size: 1rem;
+    }
+    
+    .typed-text {
+        font-size: 1.5em;
+    }
+    .cursor {
+        height: 35px;
+    }
+    .header-descricao{
+        font-size: 0.7rem;
+    }
+    .container-header {
+        grid-row-start: 1;
+        margin-top: 200px;
+        margin-left: 20px;
     }
 }
