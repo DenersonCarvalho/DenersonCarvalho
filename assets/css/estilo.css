@@ -251,11 +251,11 @@ nav {
 }
 
 .container-header {
-    grid-column-start: 2;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 3;
     color: var(--text);
+    width: 100% fit-content;
+    height: fit-content;
+    margin-top: 300px;
+    margin-left: 200px;
 }
 
 .header-apresentacao, .typed-text {
@@ -286,10 +286,19 @@ nav {
     height: 80px;
 }
 
-.header-descricao {
-    margin-top: 30px;
-    width: 70%;
+.header-contato {
+    margin-top: 100px;
 }
+
+.header-descricao p{
+    font-size: 2rem;
+    font-family: var(--font-family3);
+}
+
+.icon-rocket-header{
+    width: 60px;
+}
+
 .efeito-typed {
     display: flex;
     align-items: center;
@@ -1328,14 +1337,20 @@ nav {
         margin-top: 50px;
         flex-direction: column;
     }
-    
+    .container-header{
+        margin-top: 200px;
+        margin-left: 50px;
+        width: 100%;
+    }
+
     .header-apresentacao {
         font-size: 2.5rem;
     }
-    
+
     .typed-text {
         font-size: 3em;
     }
+
     .cursor {
         height: 70px;
     }
@@ -1395,18 +1410,29 @@ nav {
     .titulo-experiencia {
         font-size: 2em;
     }
-        
+
     .header-apresentacao {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
-    
+
     .typed-text {
-        font-size: 2.5em;
+        font-size: 1.8em;
     }
+
     .cursor {
         height: 60px;
     }
 
+    .container-header {
+        grid-row-start: 1;
+        margin-top: 200px;
+        margin-left: 20px;
+    }
+
+    .header-descricao p{
+        font-size: 1rem;
+        font-family: var(--font-family3);
+    }
 }
 
 @media only screen and (max-width: 400px) {
@@ -1452,20 +1478,23 @@ nav {
     .copyright {
         font-size: .6rem;
     }
-            
+
     .header-apresentacao {
         font-size: 1rem;
     }
-    
+
     .typed-text {
         font-size: 1.5em;
     }
+
     .cursor {
         height: 35px;
     }
-    .header-descricao{
+
+    .header-descricao {
         font-size: 0.7rem;
     }
+
     .container-header {
         grid-row-start: 1;
         margin-top: 200px;
