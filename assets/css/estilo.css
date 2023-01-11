@@ -297,6 +297,14 @@ nav {
 
 .icon-rocket-header{
     width: 60px;
+    margin-left: 20px;
+    animation: rocket 2s ease-in-out infinite;
+}
+@keyframes rocket {
+    0% {transform: rotate(0deg);}
+    30%{transform: rotate(10deg);}
+    60% {transform: rotate(-10deg);}
+    100% {transform: rotate(0deg);}
 }
 
 .efeito-typed {
@@ -1011,7 +1019,7 @@ nav {
     display: flex;
     flex-direction: column;
     color: var(--bgcolor5);
-    width: 80%;
+    width: 60%;
 }
 
 .container-contato-icons {
@@ -1296,6 +1304,9 @@ nav {
         grid-template-rows: 100px 115px auto auto auto;
         column-gap: 40px;
     }
+    .container-contato {
+        width: 80%;
+    }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -1498,6 +1509,11 @@ nav {
     .container-header {
         grid-row-start: 1;
         margin-top: 200px;
+        margin-left: 20px;
+        width: 80%;
+    }
+    .icon-rocket-header{
+        width: 30px;
         margin-left: 20px;
     }
 }
