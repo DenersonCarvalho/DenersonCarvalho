@@ -300,6 +300,7 @@ nav {
     margin-left: 20px;
     animation: rocket 2s ease-in-out infinite;
 }
+
 @keyframes rocket {
     0% {transform: rotate(0deg);}
     30%{transform: rotate(10deg);}
