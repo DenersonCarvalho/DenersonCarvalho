@@ -26,6 +26,32 @@ html {
     scroll-behavior: smooth;
 }
 
+.arrow-up {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    z-index: 2;
+    color: var(--bgcolor1);
+    background-color: var(--bgcolor5);
+    border-radius: 3px;
+    opacity: .5;
+    display: flex;
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    transition: 1s ease;
+}
+
+.arrow-none {
+    display: none;
+    transition: 1s ease;
+}
+
 #inicio {
     width: 100%;
     height: 100vh;
@@ -36,7 +62,7 @@ html {
     background-color: #202529;
 }
 
-#nav-color{
+#nav-color {
     z-index: 1;
 }
 
@@ -68,28 +94,34 @@ nav {
     clear: both;
     display: table;
 }
+.logo a{
+    display: flex;
+    align-items: center;
+}
 
-.logo-desc, .logo-icon, .logo-nome {
+.logo-desc,
+.logo-icon,
+.logo-nome {
     color: var(--text);
 }
 
-.logo-icon-div1, .logo-icon-div2 {
+.logo-icon-div1,
+.logo-icon-div2 {
     float: left;
 }
 
 .logo-icon-div1 {
     margin-left: 20px;
-    width: 75px;
+    width: 80px;
 }
 
 .logo-icon-div2 {
-    padding: 25px 5px;
     text-align: center;
 }
 
 .logo-icon {
     font-weight: 900;
-    font-size: 5em;
+    font-size: 5rem;
 }
 
 .icon1 {
@@ -102,7 +134,8 @@ nav {
     left: -35px;
 }
 
-.logo-nome1, .logo-nome2 {
+.logo-nome1,
+.logo-nome2 {
     font-size: 1.5em;
     color: var(--text);
 }
@@ -178,12 +211,12 @@ nav {
 .title-header {
     width: 100%;
     height: 100%;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
 }
-
-.title-header1, .title-header2 {
+.title-header1,
+.title-header2 {
     text-align: center;
     text-transform: uppercase;
 }
@@ -208,6 +241,85 @@ nav {
     font-family: 'Oswald', helvetica, arial, sans-serif;
     white-space: nowrap;
 }
+.header-animado {
+    width: 100%;
+    height: 100%;
+    padding-top: 200px;
+    padding-left: 320px;
+
+}
+.container-header {
+    color: var(--text);
+}
+
+.header-apresentacao, .typed-text{
+    font-size: 2.5rem;
+    font-family: var(--font-family2);
+    font-weight: 900;
+}
+.header-apresentacao{
+    font-size: 2.5rem;
+}
+.header-apresentacao span{
+    color: var(--bgcolor5);
+}
+.typed-text{
+    color: var(--bgcolor5);
+    font-size: 3.5em;
+}
+.efeito-typed{
+    display: flex;
+    align-items: center;
+}
+.cursor{
+    display: inline-block;
+    background-color: var(--bgcolor5);
+    margin-left: 0.1rem;
+    width: 5px;
+    animation: blink 1s infinite;
+    height: 80px;
+}
+.cursor.typing{
+    animation: none;
+}
+.header-descricao{
+    margin-top: 30px;
+    width: 70%;
+}
+@keyframes blink {
+    0% {background-color: var(--bgcolor5);}
+    49% {background-color: var(--bgcolor5);}
+    50% {background-color: transparent;}
+    99% {background-color: transparent;}
+    100% {background-color: var(--bgcolor5);}
+}
+.container-contato-icons-header {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.container-contato-icons-header div {
+    width: 50px;
+    height: 50px;
+    border: var(--bgcolor2) 2px solid;
+    color: var(--bgcolor2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.container-contato-icons-header div:hover {
+    color: var(--bgcolor5);
+    border-color: var(--bgcolor5);
+    transition: 0.3s;
+    transform: scale(1.1);
+}
+
 
 #sobremim {
     width: 100%;
@@ -350,9 +462,17 @@ nav {
 }
 
 @keyframes pulsate-fwd {
-    0% {transform: scale(1);}
-    50% {transform: scale(1.1);}
-    100% {transform: scale(1);}
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
 }
 
 .container-info2-sobremim table {
@@ -550,7 +670,8 @@ nav {
     color: var(--bgcolor5);
 }
 
-.skill-area1, .skill-area2 {
+.skill-area1,
+.skill-area2 {
     width: max-content;
     margin: 0 20px;
 }
@@ -946,6 +1067,10 @@ nav {
 .logo-footer {
     margin-left: 0;
 }
+.logo-rodape{
+    display: flex;
+    align-items: center;
+}
 
 #check-skills-framework:checked~.skills-framework {
     display: block;
@@ -1090,7 +1215,8 @@ nav {
         align-items: center;
     }
 
-    .info-sobremim-frase, .info-descricao-sobremim {
+    .info-sobremim-frase,
+    .info-descricao-sobremim {
         text-align: center;
     }
 
@@ -1211,9 +1337,11 @@ nav {
     .titulo-habilidade {
         font-size: 1.5em;
     }
+
     .titulo-portifolio {
         font-size: 2em;
     }
+
     .titulo-contato {
         font-size: 1.6em;
     }
@@ -1233,19 +1361,38 @@ nav {
     .title-header1 {
         font-size: calc(13px + (8/1200) * 100 * 1vw);
     }
+
+    .logo-icon {
+        font-weight: 900;
+        font-size: 3rem;
+    }
+    .icon2 {
+        left: -20px;
+    }
     .title-header2 {
         width: 100%;
         font-size: calc(20px + (8/1200) * 100 * 1vw);
     }
-    .logo-icon-div2 {
-        display: none;
-    }
+
+    .logo-nome1,
+.logo-nome2 {
+    font-size: 1.1rem;
+}
+.logo-desc{
+    font-size: .8rem;
+}
+.logo-icon-div1 {
+    width: 55px;
+}
 
     .container-skills {
-       width: 300px;
+        width: 300px;
     }
 
     .container-skill-title {
         margin-left: 50px;
+    }
+    .copyright{
+        font-size: .6rem;
     }
 }
